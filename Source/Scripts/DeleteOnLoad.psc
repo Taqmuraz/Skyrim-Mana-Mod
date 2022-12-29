@@ -5,9 +5,13 @@ Actor Property Player Auto
 
 Event OnActivate(ObjectReference akActionRef)
 	Player.PlayIdle(IdleAnimation)
-	RegisterForSingleUpdate(120)
+	RegisterForSingleUpdate(60)
 EndEvent
 
 Event OnUpdate()
 	Delete()
+EndEvent
+
+Event OnDeactivate(ObjectReference akActionRef)
+	Debug.MessageBox("Deactivated")
 EndEvent
